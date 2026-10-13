@@ -1,4 +1,4 @@
-# Throne of Ashes — Story Bible
+# Throne of the Unseen — Story Bible
 <!-- Cap: 1,500 words. Read every session. Terse fragments, not prose. Full answers: grep novel/reference/answers.txt (never read it whole). -->
 
 ## Premise
@@ -7,7 +7,7 @@
 - Genre: dark historical drama (50%) + romance/intimacy (35%) + mystery (15%). Rare fights. 18+ readers who like Red River.
 - Tone: dark, tense, bittersweet. Serious (10/10). "Beautiful but dangerous." Opens as the calm before the storm and ends ominous. Moments of silence and beauty. Mood color: dried-blood red. Sound: a gong.
 - Volume 1, "The Cursed Playmate": 9 chapters + flash-forward opening + epilogue. ~70k words. Chapters run 5–8k words, 3–5 scenes each. About a month passes. Series is planned at 10–20 volumes.
-- Title's secret meaning: Throne of Ashes is Kael's original future (death in two years), which he must burn down by reshaping Egypt from within.
+- Title: Throne of the Unseen (the unseen hand behind the throne: Kael, hidden in plain sight). Volume 1 arc: The Cursed Playmate.
 
 ## Cast
 - **Kael Amunet** (hero, narrator). 18 inside, 10-year-old body. Japanese; in Japan he had black hair and a black school uniform. After the curse he's small and soft-featured with blond hair (Kazuto-style cut). His history-professor parents died in a fire, and their lessons are his "modern knowledge" (facts remembered, not powers). Strategist. Polite, formal, clipped and precise, with archaic phrasing that unnerves people; never swears. Overused thought: "They see a child." Catchphrase: "The gods don't whisper to fools." When scared he gives a bitter laugh: "Just another variable I didn't account for." Wants control over his fate. Needs someone to see the real him. Fears exposure, and secretly fears the child body will dull his mind. Loves Tut. Hates powerlessness. Arc type: corruption, as he crosses lines to survive and learns that bonds matter more than pure manipulation. Nickname from generals: "the Pharaoh's Toy."
@@ -16,7 +16,7 @@
 - **Aneb** (rival). 18, palace slave who has served Tut since infancy; "the Pharaoh's Shadow." Low, calm, few words. Devoted, jealous, stealthy. "A slave I may be, I am human." Catchphrase: "Even pharaohs bleed sand." Shifts loyalty toward Kael. Ch8: helps hide the body without a word.
 - **Nakhti** (mentor). 40, former slave turned royal advisor and temple scribe; "the Raven of Kemet." Weathered, cryptic, faithful. Smooth formal voice with long pauses. Teaches survival and masking with strict, hands-on lessons, and grows to love Kael like a son. "The gods whisper to those who listen—wisdom hides in silence, not in shouting." Framed for the steward's death and arrested at the end of Vol 1.
 - **Kalici** (emotional anchor; not a romance). 10, Kael's hand servant. Soft voice that rambles. Perceptive; sees through masks: "What mask are you hiding today?" The Vizier sent her to frame Kael with bruises given by his steward, but she couldn't scream, and Kael asked who hurt her. Becomes his double agent in the Vizier's house. POV for Ch7.
-- **Ren** (wildcard). Masked: raven-black leather, golden mask, carved bronze ring. Rough gravelly voice, few words. Appears once (Ch9), drops through the ceiling vent and saves Kael. "I do not care about the pharaoh. I have been tasked to save you, Kael." Says Kael isn't the first outsider he's saved. Also, unseen, frees Wennefer in Ch8.
+- **Ren** (wildcard). 22. Masked: raven-black leather, golden mask, carved bronze ring. Rough gravelly voice, few words. Appears once (Ch9), drops through the ceiling vent and saves Kael. "I do not care about the pharaoh. I have been tasked to save you, Kael." Says Kael isn't the first outsider he's saved. Also, unseen, frees Wennefer in Ch8.
 - **Nakhtmin**. 22, Commander of the Royal Retainers and Shield of the Living Pharaoh. Scarred jaw, black hair pulled back severely, eyes older than his age. Cold and flat: "It will be done." Sketches battle formations in the dust. Officially serves under Amenhotep; becomes the team's spy inside the Vizier's camp. Gets hurt.
 - **Wennefer**. 32, High Priest of Amun. Silver-streaked braids, lapis and gold. Speaks in measured, breath-counted pauses. Suspects the curse is divine punishment, gets a partial truth from Kael in Ch8, is tortured, freed by a masked stranger. Keeps Kael's secret to the grave.
 - **The God of the Past**. Grants Kael's dying wish ("I wish I was a kid again") "in his own way." A void of ancient sundials. "Simple? We shall see." Appears only in Ch1 and the epilogue's last image.

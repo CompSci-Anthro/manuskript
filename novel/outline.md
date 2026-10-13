@@ -1,4 +1,4 @@
-# Throne of Ashes — Outline
+# Throne of the Unseen — Outline
 <!-- Generated from the 3,000-question answers. Beats come from your answers; edit freely. -->
 
 Volume 1: The Cursed Playmate. 9 chapters, ~70,000 words, 3–5 scenes per chapter, present tense, Kael first person (Ch7 is Kalici's POV).
@@ -27,7 +27,7 @@ Opening: a one-page flash-forward before Ch01 (guards drag a small blond boy wit
 - Scene 4: Dawn  Setting: The chamber at sunrise. Purpose: Seal her loyalty and set up Chapter 4.
 - Notes, extra ideas or must-have moments for Chapter 3 None
 
-## Ch04 — The protagonist saves Kalici from Amenhotep's wrath
+## Ch04 — Kalici Saved from Amenhotep's Wrath
 - Scene 1: The Report  Setting: Amenhotep’s private chambers, early morning. Purpose: Show how dangerous the Vizier is and make Kalici a double agent.
 - Scene 2: The Escape  Setting: Palace corridors, then Kael’s chamber. Purpose: Raise the stakes and bring the two leads together.
 - Scene 3: The Audience  Setting: The pharaoh’s chambers or a small audience hall. Purpose: Kael’s first political move, and Tut using his authority.
@@ -67,7 +67,7 @@ Summary: Kael's narration returns. The morning after Kalici smells myrrh at the 
 - Scene 5: What Can't Be Washed. Wennefer is taken and freed by a masked stranger, Kael scrubs his hands, and the vent creaks.
 - Notes, extra ideas or must-have moments for Chapter 8 This is Kael's lowest point in Volume 1, the scene the story uses for "he's forced to kill an innocent person to protect his secret." Don't soften it: the slave is innocent, only frightened. Keep it quiet and fast, with no music and no speech. Kael's narration goes cold and clipped and then stops entirely for one blank line. Aneb seeing it starts the shift from rival to unlikely ally: from here on they share a secret neither can tell. Wennefer's torture happens off the page, and only the rumor reaches Kael (Ren's first unseen rescue).
 
-## Ch09 — The wildcard appears
+## Ch09 — The Wildcard Appears
 Summary: The assassin's blade slips into the royal bed chamber at midnight. Kael throws himself between it and Tutankhamen and takes the stab wound. Smoke fills the room, and the guards are drawn away by a false alarm. A masked stranger drops through the ceiling vent, presses cloth to Kael's wound, and whispers that the Vizier's men are still inside. He lifts Kael and carries him through the palace corridors to the physician while Tut shouts for the guards. Kael sees only the stranger's eyes and one carved bronze ring.
 - 1. Blade falls in smoke; Kael shields Tut. 2. Ren drops through the vent. 3. Corridor escape to the physician. 4. Kael fading, cliffhanger.
 - Notes, extra ideas or must-have moments for Chapter 9 The chapter ends with Kael still hovering between life and death as a cliff hanger
