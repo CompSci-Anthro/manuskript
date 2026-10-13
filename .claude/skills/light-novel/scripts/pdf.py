@@ -126,9 +126,11 @@ def main():
     ap.add_argument("--volume", default="")
     ap.add_argument("--author", default="")
     ap.add_argument("--watermark", default="")
+    ap.add_argument("--src", default="", help="scene folder to typeset instead of novel/chapters/chNN (an alternate draft)")
+    ap.add_argument("--label", default="", help='suffix for the file name and title page, e.g. "Draft B"')
     a = ap.parse_args()
 
-    cdir = os.path.join(NOVEL, "chapters", "ch%02d" % a.chapter)
+    cdir = a.src or os.path.join(NOVEL, "chapters", "ch%02d" % a.chapter)
     scenes = sorted(f for f in os.listdir(cdir) if re.fullmatch(r"s\d+\.md", f)) if os.path.isdir(cdir) else []
     if not scenes:
         sys.exit("No scenes in %s" % cdir)
@@ -144,7 +146,7 @@ def main():
 <title>%(book)s — Chapter %(n)d: %(title)s</title><style>%(css)s</style></head><body>
 %(wm)s
 <section class="front"><h1 class="series">%(book)s</h1><div class="rule"></div>%(vol)s
-<div class="author">%(author)s</div><div class="note">Reading copy · Chapter %(n)d draft · %(today)s</div></section>
+<div class="author">%(author)s</div><div class="note">Reading copy · Chapter %(n)d%(label)s · %(today)s</div></section>
 <section class="verso"><p>%(book)s%(volsep)s</p><p>Chapter %(n)d draft reading copy, %(today)s. Illustrations not yet included.</p>
 <p>Text &copy; %(year)d %(author)s. All rights reserved.</p></section>
 <section class="chapter"><header><div class="num">Chapter %(n)d</div><h2>%(title)s</h2>
@@ -155,7 +157,7 @@ def main():
         "book": html.escape(book), "n": a.chapter, "title": html.escape(title), "vol": vol,
         "volsep": (" · " + html.escape(a.volume)) if a.volume else "", "author": author,
         "today": today, "year": datetime.date.today().year, "body": body,
-        "css": CSS,
+        "css": CSS, "label": (" " + html.escape(a.label)) if a.label else " draft",
         "wm": '<div class="wm" aria-hidden="true">%s</div>' % html.escape(a.watermark) if a.watermark else "",
         "next": '<div class="next">Next: Chapter %d · %s</div>' % (a.chapter + 1, html.escape(nxt)) if nxt else "",
     }
@@ -163,7 +165,7 @@ def main():
     outdir = os.path.join(NOVEL, "pdf")
     os.makedirs(outdir, exist_ok=True)
     safe = re.sub(r'[\\/:*?"<>|]', "", title)
-    out = os.path.join(outdir, "Ch%02d - %s.pdf" % (a.chapter, safe))
+    out = os.path.join(outdir, "Ch%02d - %s%s.pdf" % (a.chapter, safe, (" (%s)" % a.label) if a.label else ""))
     with tempfile.TemporaryDirectory() as tmp:
         src = os.path.join(tmp, "chapter.html")
         with open(src, "w", encoding="utf-8") as f:

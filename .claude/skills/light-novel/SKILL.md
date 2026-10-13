@@ -42,7 +42,7 @@ novel/
 | `LN status` | Word counts per chapter and scene, total, and the next empty scene |
 | `LN new-chapter N S` | Create chapter N with S empty scene files |
 | `LN export` | Build a Manuskript project at `novel-export/<title>.msk` + folder, so the user can open it in the app |
-| `python3 .claude/skills/light-novel/scripts/pdf.py N --volume "Volume 1: …" --author "…"` | Typeset chapter N as a 5.5 × 8.25 in reading-copy PDF in `novel/pdf/` (title page, chapter opener, running heads, bookmarks, tagged). Add `--watermark "Advance copy"` for early-reader copies. Needs Node + Playwright |
+| `python3 .claude/skills/light-novel/scripts/pdf.py N --volume "Volume 1: …" --author "…"` | Typeset chapter N as a 5.5 × 8.25 in reading-copy PDF in `novel/pdf/` (title page, chapter opener, running heads, bookmarks, tagged). Add `--watermark "Advance copy"` for early-reader copies; `--src novel/drafts/<dir> --label "Draft B"` typesets an alternate draft of the same chapter. Needs Node + Playwright |
 
 ## Workflows
 
