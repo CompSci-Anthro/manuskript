@@ -18,6 +18,7 @@
 - **Kalici** (Ch3) — 10, servant girl sent by the Vizier to frame Kael; can't scream. Rambling, apologetic, soft. "What mask are you hiding today?" Loyalty, never romance.
 - **Ren** (Ch9 only) — gold mask, black leather, jewelled sword; "My name is Ren. A prophecy told me to save you."
 - **Wennefer** — High Priest of Amun, 32, measured pauses.
+- **Hori** — 20, river soldier; sunburnt nose; arrests Kael, leaves him the bread, "That one lasted eleven days." Not cruel; expects nothing. **Henut** — bread seller, cat tattoo. **Userhat** — heavy courtier who keeps the king's house; objects on cue.
 - **The God of the Past** — ancient, unreadable; dusty gold, drifting sand, white-on-black. Speaks little: "Simple? We shall see."
 - **Mrs. Hayashi** — old tea-shop owner on the cherry road; studied texts with Kael's parents; holds their unpaid book order.
 
