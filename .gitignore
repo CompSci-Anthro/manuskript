@@ -23,6 +23,7 @@ build
 icons/Numix
 manuskript/pycallgraph.txt
 manuskript.log
+novel-export
 snowflake*
 test-projects
 main.pyproject.user
