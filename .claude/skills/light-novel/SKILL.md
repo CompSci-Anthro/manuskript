@@ -42,6 +42,7 @@ novel/
 | `LN status` | Word counts per chapter and scene, total, and the next empty scene |
 | `LN new-chapter N S` | Create chapter N with S empty scene files |
 | `LN export` | Build a Manuskript project at `novel-export/<title>.msk` + folder, so the user can open it in the app |
+| `python3 .claude/skills/light-novel/scripts/pdf.py N --volume "Volume 1: …" --author "…"` | Typeset chapter N as a 5.5 × 8.25 in reading-copy PDF in `novel/pdf/` (title page, chapter opener, running heads, bookmarks, tagged). Add `--watermark "Advance copy"` for early-reader copies. Needs Node + Playwright |
 
 ## Workflows
 
@@ -54,6 +55,7 @@ novel/
 2. For each scene in the chapter, `Write` `novel/chapters/chNN/sNN.md` from its beats.
 3. When the chapter is done, `Write` `summaries/chNN.md` and update `STATE.md`. Add any new permanent facts (names, rules, promises made on the page) to `BIBLE.md`.
 4. Run `LN status` and give the user a one-line report.
+5. If the user wants a reading copy, run `pdf.py N` and send the file. Don't render or re-read the PDF to proofread prose; check one page image only if the layout code changed.
 
 **Revise:** `Grep` for the passage, `Edit` that passage only, and reply in one line. If the change affects continuity, also update the summary or bible line it touches.
 
