@@ -31,6 +31,7 @@ novel/
   outline.md        one line per chapter; scene beats only for planned chapters
   summaries/chNN.md ≤120-word summary of each finished chapter
   chapters/chNN/sNN.md  the prose, one file per scene
+  reference/answers.txt  the full questionnaire answers: use Grep for one detail, never Read it whole
 ```
 
 ## Commands
