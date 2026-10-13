@@ -4,4 +4,5 @@
 - Position: not started
 - Open threads:
 - Planted, not yet paid off:
+- Confirm with creator:
 - Next action: fill BIBLE.md and the chapter list in outline.md

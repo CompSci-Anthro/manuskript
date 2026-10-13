@@ -6,6 +6,9 @@ Usage (from the repo root):
   ln.py context             print bible + state + recent summaries + current beats
   ln.py status              word counts and next empty scene
   ln.py new-chapter N S     create chapters/chNN with S empty scene files
+  ln.py draft N LABEL S     create drafts/chNN-draft-LABEL with S empty scenes (an alternate take)
+  ln.py promote N LABEL     make that draft the canonical chapters/chNN; the old one moves to drafts/
+  ln.py count [PATH...]     prose words per file (no comments, breaks or place/time headers)
   ln.py export              build a Manuskript project in novel-export/
 """
 import os
@@ -45,6 +48,16 @@ def strip_comments(text):
 
 def words(text):
     return len(strip_comments(text).split())
+
+
+def prose_words(text):
+    """Words of prose only: comments, *** breaks and **Place. Time.** headers don't count."""
+    keep = []
+    for line in strip_comments(text).splitlines():
+        s = line.strip()
+        if s and s != "***" and not re.fullmatch(r"\*\*[^*]+\*\*", s):
+            keep.append(s)
+    return len(" ".join(keep).split())
 
 
 def title():
@@ -146,6 +159,64 @@ def cmd_new_chapter(args):
     print("Created: " + (", ".join(made) or "nothing (already exist)"))
 
 
+def make_scenes(d, s):
+    made = []
+    for i in range(1, s + 1):
+        p = os.path.join(d, "s%02d.md" % i)
+        if not os.path.exists(p):
+            write(p, "")
+            made.append(os.path.relpath(p, ROOT))
+    return made
+
+
+def cmd_draft(args):
+    need_novel()
+    if len(args) != 3:
+        die("Usage: ln.py draft N LABEL SCENES   (LABEL like b, c; never a model name)")
+    n, label, s = int(args[0]), re.sub(r"[^a-z0-9]", "", args[1].lower()), int(args[2])
+    d = os.path.join(NOVEL, "drafts", "ch%02d-draft-%s" % (n, label))
+    made = make_scenes(d, s)
+    print("Created: " + (", ".join(made) or "nothing (already exist)"))
+    print("Typeset it with: pdf.py %d --src %s --label \"Draft %s\"" % (n, os.path.relpath(d, ROOT), label.upper()))
+
+
+def cmd_promote(args):
+    need_novel()
+    if len(args) != 2:
+        die("Usage: ln.py promote N LABEL")
+    n, label = int(args[0]), args[1].lower()
+    src = os.path.join(NOVEL, "drafts", "ch%02d-draft-%s" % (n, label))
+    dst = os.path.join(NOVEL, "chapters", "ch%02d" % n)
+    if not os.path.isdir(src):
+        die("No such draft: " + os.path.relpath(src, ROOT))
+    if os.path.isdir(dst):
+        for letter in "abcdefgh":
+            old = os.path.join(NOVEL, "drafts", "ch%02d-draft-%s" % (n, letter))
+            if not os.path.exists(old):
+                shutil.move(dst, old)
+                print("Previous chapter moved to " + os.path.relpath(old, ROOT))
+                break
+    shutil.move(src, dst)
+    print("Promoted to %s. Rebuild its PDF without --src/--label and remove the old labelled PDFs." % os.path.relpath(dst, ROOT))
+
+
+def cmd_count(args):
+    need_novel()
+    paths = []
+    for a in args or [os.path.join(NOVEL, "chapters")]:
+        if os.path.isdir(a):
+            for root, _, files in os.walk(a):
+                paths += [os.path.join(root, f) for f in files if f.endswith(".md")]
+        else:
+            paths.append(a)
+    total = 0
+    for p in sorted(paths):
+        n = prose_words(read(p))
+        total += n
+        print("%6d  %s" % (n, os.path.relpath(p, ROOT)))
+    print("%6d  total" % total)
+
+
 def cmd_export(args):
     need_novel()
     t = title()
@@ -187,7 +258,8 @@ def cmd_export(args):
 
 
 COMMANDS = {"init": cmd_init, "context": cmd_context, "status": cmd_status,
-            "new-chapter": cmd_new_chapter, "export": cmd_export}
+            "new-chapter": cmd_new_chapter, "draft": cmd_draft, "promote": cmd_promote,
+            "count": cmd_count, "export": cmd_export}
 
 if __name__ == "__main__":
     if len(sys.argv) < 2 or sys.argv[1] not in COMMANDS:
